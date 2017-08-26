@@ -1,0 +1,10 @@
+div {
+  width: 80%;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+h1 {
+  border: 1px solid blue;
+  margin-left: 3%;
+}
