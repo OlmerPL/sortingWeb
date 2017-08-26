@@ -1,0 +1,9 @@
+#dataTable {
+
+  width: 90%;
+  height: 200%;
+  /*border: 2px solid red;*/
+  border-radius: 10px;
+  margin: auto;
+  background-color: #333333;
+}
