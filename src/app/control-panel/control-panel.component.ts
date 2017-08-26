@@ -16,7 +16,7 @@ export class ControlPanelComponent implements OnInit {
     this.dataTable = [];
   }
 
-  static shuffle(array) {
+  shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...
