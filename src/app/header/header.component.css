@@ -1,10 +1,20 @@
-div {
-  width: 80%;
-  border: 1px solid red;
-  border-radius: 5px;
+#header {
+  width: 100%;
+  background-color: rgba(1,6,17,0.71);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#headerContent {
+  /*border: 1px solid white;*/
+}
+h1, p {
+  /*border: 1px solid blue;*/
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
 }
 
-h1 {
-  border: 1px solid blue;
-  margin-left: 3%;
+p {
+  /*border: 1px solid greenyellow;*/
+  font-style: italic;
 }
