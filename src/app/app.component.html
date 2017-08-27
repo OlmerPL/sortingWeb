@@ -1,7 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div id="mainbody">
   <app-header></app-header>
-  <app-control-panel></app-control-panel>
+  <app-control-panel (sendTable)="resendTable($event)"></app-control-panel>
+  <app-data-table [recivedTable]="newTableSend"></app-data-table>
 
 </div>
 

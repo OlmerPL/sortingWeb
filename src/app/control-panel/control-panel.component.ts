@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-control-panel',
@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class ControlPanelComponent implements OnInit {
   public dataValue: number;
-
-  private dataTable: number[];
+  public dataTable: number[];
+  @Output() sendTable = new EventEmitter<number[]>();
 
   constructor() {
     this.dataValue = 10;
@@ -34,25 +34,29 @@ export class ControlPanelComponent implements OnInit {
     return array;
   }
 
-  fillDataTable(event) {
-    this.dataValue = event.target.value;
-  }
+  // fillDataTable(event) {
+  //   this.dataValue = event.target.value;
+  // }
 
   initialDataTableContent() {
     this.dataTable.length = 0;
-    let i: number;
-    for (i = 0; i < this.dataValue; i++) {
+    for (let i = 0; i < this.dataValue; i++) {
       this.dataTable.push(i + 1);
     }
+    this.dataTable = this.dataTable.slice();
+
     console.log(this.dataTable);
+    this.sendTable.emit(this.dataTable);
   }
 
   randomizeDataTable() {
     this.dataTable = this.shuffle(this.dataTable);
+    this.dataTable = this.dataTable.slice();
     console.log(this.dataTable);
+    this.sendTable.emit(this.dataTable);
   }
 
   ngOnInit() {
+    this.initialDataTableContent();
   }
-
 }

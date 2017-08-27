@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-data-table',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-table.component.css']
 })
 export class DataTableComponent implements OnInit {
+  @Input() public recivedTable: number[];
 
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
