@@ -1,6 +1,6 @@
 <div id="controlPanel">
   <ul>
-    <li><input type="text" name="range" title="numbers from 1 to infinity" value={{dataValue}} (input)="fillDataTable($event)"></li>
+    <li><input type="text" name="range" title="numbers from 1 to infinity" [(ngModel)]="dataValue"></li>
     <li><button type="button" (click)="initialDataTableContent()">Generate</button></li>
     <li><button type="button" (click)="randomizeDataTable()">Mix</button></li>
     <li>
